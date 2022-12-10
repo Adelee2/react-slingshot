@@ -26,6 +26,7 @@ jobs:
       - restore_cache:
           keys:
             - "npm_packages"
+      - run: npm i
       - run: npm run test
   analyze:
     <<: *defaults
